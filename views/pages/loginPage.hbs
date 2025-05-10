@@ -1,0 +1,51 @@
+<div class="tab-panel" id="panel-6">
+  <div class="" id="loginPanel">
+    <form action="/login" method="post"> 
+      <h1 class="text-center p-1">Login</h1>
+      <hr />
+      <div class="text-center">
+        <h2>Please enter the PIN</h2>
+      </div>
+      <div class="row">
+        <div class="m-auto text-center">
+          <input
+            type="text"
+            name="passCode"
+            id="passCode"
+            class="w-100 dial-Input"
+            placeholder="Enter the PIN" 
+            maxlength="4" 
+            autocomplete="off" 
+          />
+          <div id="pin-number">
+            <div class="d-flex-wrap-center">
+              <button type="button" class="pin-button">1</button>
+              <button type="button" class="pin-button">2</button>
+              <button type="button" class="pin-button">3</button>
+            </div>
+            <div class="d-flex-wrap-center">
+              <button type="button" class="pin-button">4</button>
+              <button type="button" class="pin-button">5</button>
+              <button type="button" class="pin-button">6</button>
+            </div>
+            <div class="d-flex-wrap-center">
+              <button type="button" class="pin-button">7</button>
+              <button type="button" class="pin-button">8</button>
+              <button type="button" class="pin-button">9</button>
+            </div>
+            <div class="d-flex-wrap-center">
+              <button type="button" class="pin-button">0</button>
+              <input type="button" id="clearBtn" value="Clear" class="pin-button" /> <!-- Changed to a button for consistency -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex-column-center p-1">
+        <button type="submit" class="dial-Input" id="loginBtnSubmit">OK</button>
+      </div>
+      <div class="m-auto text-center">
+        <h2 class="alert-error" id="pinError"></h2>
+      </div>
+    </form>
+  </div>
+</div>

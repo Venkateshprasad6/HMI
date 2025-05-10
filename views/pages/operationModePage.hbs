@@ -1,0 +1,15 @@
+<div class='tab-panel' id=''>
+  <div class='p-1'>
+    <h1 class='text-center f-40 pb-2'>Operation Mode</h1>
+    <div class='bg-lightblack-card my-3' id='OpetationMode'>
+      <div class='col-12 d-flex-column-center operation-mode'>
+        <button class='default-btn f-40 {{#unless isAutoActive}}btn-active{{/unless}}' name="{{typeAutomatic}}" id="{{typeAutomatic}}">{{automaticMode}}</button>
+      </div>
+      <div class='col-12 d-flex-column-center operation-mode'>
+        <button class='default-btn f-40 {{#if isAutoActive}}btn-active{{/if}}' name="{{typeManual}}" id="{{typeManual}}">{{manualMode}}</button>
+      </div>
+    </div>
+     <div role="alert" class="f-24 text-center font-bold alert m-tb-12" id="statusAlert">
+    </div>
+  </div>
+</div>

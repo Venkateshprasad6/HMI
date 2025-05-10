@@ -1,0 +1,99 @@
+<!-- Tab 5 -->
+<div class='tab-panel' id='panel-5'>
+  <div class=''>
+    {{#if messageListConnected}}
+    <div class='row' id='messageTabs'>
+      <div class='col-6 message-tab message-tab-active' id='emergencyMessageTab'>
+        Emergency Message
+      </div>
+      <div class='col-6 message-tab' id='specialMessageTab'>
+        Special Message
+      </div>
+    </div>
+
+    <!-- Emergency Message -->
+    <div class='col-12' id="emergencyMessageTabContent">
+      <div class='messageList'>
+        <ol class='bg-silver padding-inline-start scroll-y' style='height: 745px' id='listOfEmergencyMessages'>
+          {{#each emergencyMessageList}}
+          <li class="{{currentPlayMsg this.messageId ../playingMessageEventID}}" data-messageId={{this.messageId}}>{{this.name}}</li>
+          {{else}}
+          <h1 class="empty">No messages available</h1>
+          {{/each}}
+
+          {{!-- <li class='active'>Stand clear off the doors.</li>
+          <li>Please mind the gap between the train and the platform.</li>
+          <li>Help us to keep your Environment tidy - please carry your
+            rubbish for cisposal with you or use dustbin.</li>
+          <li>Attention please! There will be a short delay to this service.
+            We apologize for inconvenience caused.</li>
+          <li>We apologize for the ongoing delay. We will give you further
+            information as soon as possible, please wait for further
+            announcements.</li>
+          <li> Evacuate through Emergency door</li>
+          <li>
+            Attention please! There will be a delay due to technical reasons.
+            This problem would affect air conditioning. However, train
+            ventilation will continue. We apologize for the inconvenience
+            caused.
+          </li> --}}
+        </ol>
+      </div>
+      {{!-- <div class='d-flex-space-evenly'>
+        <button class='default-btn' id='emergencyStopButton'>stop</button>
+        <button class='default-btn' id='emergencyPlayBtn'>PLAY</button>
+      </div> --}}
+    </div>
+
+    <!-- Special Message -->
+    <div class='col-12 d-none' id="specialMessageTabContent">
+      <div class='messageList'>
+        <ol class='bg-silver padding-inline-start scroll-y' style='height: 745px' id='listOfSpecialMessage'>
+          {{#each specialMessageList}}
+          <li class="{{currentPlayMsg this.messageId ../playingMessageEventID}}" data-messageId={{this.messageId}}>{{this.name}}</li>
+          {{else}}
+          <h1 class="empty">No messages available</h1>
+          {{/each}}
+
+          {{!-- <li>Please help us to keep trains and stations clean.</li>
+
+          <li>Passangers are requested to deposit the tokens after their
+            journey. Unauthorized possession of token is an offence invoking a
+            fine of Rs.200/- or prosecution under indian Penal Code.</li>
+
+          <li>Please vacate the seats for physically challenged, senior
+            citizens and ladies.</li>
+
+          <li>Use smart cards to make your travel cheaper and convenient.</li>
+          <li>Thank you onboarding</li>
+          <li>
+            The train is not scheduled to stop in the station : Jamia Millia
+            Islamia</li> --}}
+        </ol>
+      </div>
+
+      {{!-- <div class='d-flex-space-evenly'>
+        <button class='default-btn' id='specialStopButton'>stop</button>
+        <button class='default-btn' id='specialPlayBtn'>PLAY</button>
+      </div> --}}
+    </div>
+
+    <div class='d-flex-space-evenly'>
+      {{log "Button Status" playingMessageEventID}}
+      <button class='default-btn {{#unless playingMessageEventID}}disabled{{/unless}}' id='stopMessageButton' >stop</button>
+      <button class='default-btn disabled' id='playMessageButton' >PLAY</button>
+    </div>
+
+    {{else}}
+    <div class='d-flex-column-center bg-lightblack-card pt-40'>
+      <div class='row align-center'>
+        <div class="text-center text-dark">
+          <h1 class="text-red"> Unable to fetch the Message List Information</h1>
+          <h3 class="text-white"><strong> 500 - Internal Server Error - Please check MessageGate-Way Server. </strong>
+          </h3>
+        </div>
+      </div>
+    </div>
+    {{/if}}
+  </div>
+</div>

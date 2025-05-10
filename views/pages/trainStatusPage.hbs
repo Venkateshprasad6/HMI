@@ -1,0 +1,67 @@
+<div class='tab-panel' id='panel-1'>
+  <div class=''>
+    <h1 class='text-center m-3'>Train Status</h1>
+    <div class='bg-lightblack-card'>
+      <div class='row'>
+        <div class='col-4'>
+          <h1 class='text-right dark-grey f-36'>Mission ID:</h1>
+        </div>
+        <div class='col-8'>
+          <h1 class='mx-2 font-bold f-36 text-ellipsis' data-ddrvarid='{{LMTTrainNumber}}'>{{trainID}}</h1>
+        </div>
+        <div class='col-4'>
+          <h1 class='text-right dark-grey f-36'>Line:</h1>
+        </div>
+        <div class='col-8'>
+          <h1 class='mx-2 font-bold f-36' data-ddrvarid='{{LMTMissionName}}'>{{route}}</h1>
+        </div>
+        <!--
+        <div class='col-4'>
+          <h1 class='text-right dark-grey f-36'>Line:</h1>
+        </div>
+        <div class='col-8'>
+          <h1 class='mx-2 font-bold f-36 text-ellipsis' data-ddrvarid='{{LMTLineID}}'>{{line}}</h1>
+        </div> -->
+      </div>
+      <div class='row align-center'>
+        <div class='col-4'>
+          <h1 class='text-right f-36 text-orange'>Current Station:</h1>
+        </div>
+        <div class='col-8'>
+          <h1 class='mx-2 font-bold f-36 text-orange text-ellipsis' data-ddrvarid='{{LMTCurrentStationName}}'>
+            {{currentStation}}
+          </h1>
+        </div>
+      </div>
+      <div class='row align-center'>
+        <div class='col-4'>
+          <h1 class='text-right text-green f-36'>Next Station:</h1>
+        </div>
+        <div class='col-8'>
+          <h1 class='mx-2 font-bold text-green f-36 text-ellipsis' data-ddrvarid='{{LMTNextStationName}}'>
+            {{nextStation}}</h1>
+        </div>
+      </div>
+      <div class='row align-center'>
+        <div class='col-4'>
+          <h1 class='text-right text-yellow f-36'>Next Skip:</h1>
+        </div>
+        <div class='col-8'>
+          <h1 class='mx-2 font-bold text-yellow f-36 text-ellipsis' data-ddrvarid='{{LMTNextSkipStationName}}'>
+            {{skipStation}}</h1>
+        </div>
+      </div>
+    </div>
+    <div class='pt-3'>
+      <h1 class='text-center m-3'>Operation Mode</h1>
+      <div class='bg-lightblack-card my-3' id='OpetationMode'>
+        <div class='col-12 d-flex-space-around ptb-40'>
+          <button class='default-btn' data-ddrvarid="{{operationMode}}" name="{{typeAutomatic}}" id="{{typeAutomatic}}">{{automaticMode}}</button>
+          <button class='default-btn' data-ddrvarid="{{operationMode}}" name="{{typeManual}}" id="{{typeManual}}">{{manualMode}}</button>
+        </div>
+      </div>
+      <div role="alert" class="f-24 text-center font-bold alert m-tb-12" id="statusAlert">
+      </div>
+    </div>
+  </div>
+</div>

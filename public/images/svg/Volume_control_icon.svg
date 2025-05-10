@@ -1,0 +1,19 @@
+<svg fill='#ffffff' width='70px' height='70px' viewBox="0 0 24 24">
+    <g data-name="Layer 2">
+        <path d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M7 6v7" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" fill="none"
+            class="stroke-000000"></path>
+        <circle cx="7" cy="14.5" r="1.5" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" fill="none"
+            class="stroke-000000"></circle>
+        <path d="M7 16v2M12 6v2" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" fill="none"
+            class="stroke-000000"></path>
+        <circle cx="12" cy="9.5" r="1.5" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" fill="none"
+            class="stroke-000000"></circle>
+        <path d="M12 11v7M17 6v5" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" fill="none"
+            class="stroke-000000"></path>
+        <circle cx="17" cy="12.5" r="1.5" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" fill="none"
+            class="stroke-000000"></circle>
+        <path d="M17 14v4" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" fill="none"
+            class="stroke-000000"></path>
+    </g>
+</svg>

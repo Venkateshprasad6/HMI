@@ -1,0 +1,20 @@
+<div class='tab-panel' id='panel-3'>
+    <div class='p-1'>
+        <h1 class='text-center p-1'>Skip Stations</h1>
+        <ul class='bg-silver p-0 scroll-y h-700' id='skipStationList'>
+            {{#each skipStation}}
+            <li> {{this.name}} </li>
+            {{else}}
+            <div class='text-center text-dark'>
+                <h1> Unable to fetch the Skip Station Information</h1>
+                <h3>
+                    <u> 500 - Internal Server Error - Please check LMT SERVER. </u>
+                </h3>
+            </div>
+            {{/each}}
+        </ul>
+        <div class=''>
+            <button class='default-btn float-right' disabled id="skipStationBtn">Skip Station</button>
+        </div>
+    </div>
+</div>

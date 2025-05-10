@@ -1,0 +1,183 @@
+<div class='tab-panel' id='panel-4'>
+  <div class=''>
+    <h1 class='text-center'>Settings</h1>
+  </div>
+
+  <div class='d-flex-column-center bg-lightblack-card m-b-1rem'>
+    {{!Internal speake}}
+    <form id="internalSpeakForm">
+      <h1> Internal speaker</h1>
+      <div class='align-center'>
+        <div class='align-center'>
+          <div class='mx-2 d-Inline-block'>
+            <input type='text' class='d-none' name='internalSpeaker' id='inputInternalSpeaker'>
+            <div class='cursor-pointer' id="internal-Vol-MINUS">
+              <img src='../images/dash-circle-fill.svg' alt='-' />
+            </div>
+          </div>
+          <div class='mx-2 d-Inline-block'>
+            <datalist id='internal-range'>
+              {{#each range}}
+              <option class='range-option' value='{{this.[0]}}'>{{this.[1]}}</option>
+              {{/each}}
+            </datalist>
+          </div>
+          <div class='mx-2 d-Inline-block'>
+            <div class='cursor-pointer' id="internal-Vol-PLUS">
+              <img src='../images/plus-circle-fill.svg' alt='+' />
+            </div>
+          </div>
+          <div class='mx-2 d-Inline-block'>
+            <button class='default-btn mx-3' id="setInternalSpeakerBtn">SET</button>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    {{! cabin speaker }}
+    <form id="cabinSpeakerForm">
+      <h1> Cabin speaker</h1>
+      <div class='align-center'>
+        <div class='align-center'>
+          <div class='mx-2 d-Inline-block'>
+            <input type='text' class='d-none' name='cabinSpeaker' id='inputCabinSpeaker'>
+            <div class='cursor-pointer' id="cabin-Vol-MINUS">
+              <img src='../images/dash-circle-fill.svg' alt='-' />
+            </div>
+          </div>
+          <div class='mx-2 d-Inline-block'>
+            <datalist id='cabin-range'>
+              {{#each cabinValueRange}}
+              <option class='range-option' value='{{this.[0]}}'>{{this.[1]}}</option>
+              {{/each}}
+            </datalist>
+          </div>
+          <div class='mx-2 d-Inline-block'>
+            <div class='cursor-pointer' id="cabin-Vol-PLUS">
+              <img src='../images/plus-circle-fill.svg' alt='+' />
+            </div>
+          </div>
+          <div class='mx-2 d-Inline-block'>
+            <button class='default-btn mx-3' id="setCabinSpeakerBtn">SET</button>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    {{! External speaker }}
+    <form id="externalSpeakerForm">
+      <h1> External speaker</h1>
+      <div class='align-center'>
+        <div class='align-center'>
+          <div class='mx-2 d-Inline-block'>
+            <input type='text' class='d-none' name='externalSpeaker' id='inputExternalSpeaker'>
+            <div class='cursor-pointer' id="external-Vol-MINUS">
+              <img src='../images/dash-circle-fill.svg' alt='-' />
+            </div>
+          </div>
+          <div class='mx-2 d-Inline-block'>
+            <datalist id='external-range'>
+              {{#each range}}
+              <option class='range-option' value='{{this.[0]}}'>{{this.[1]}}</option>
+              {{/each}}
+            </datalist>
+          </div>
+          <div class='mx-2 d-Inline-block'>
+            <div class='cursor-pointer' id="external-Vol-PLUS">
+              <img src='../images/plus-circle-fill.svg' alt='+' />
+            </div>
+          </div>
+          <div class='mx-2 d-Inline-block'>
+            <button class='default-btn mx-3' id="setExternalSpeakerBtn">SET</button>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    {{! Internal + External speaker }}
+    <form id="externalSpeakerForm">
+      <h1> Internal + External speaker</h1>
+      <div class='align-center'>
+        <div class='align-center'>
+          <div class='mx-2 d-Inline-block'>
+            <input type='text' class='d-none' name='combinedVolSpeaker' id='inputCombinedSpeaker'>
+            <div class='cursor-pointer' id="combined-Vol-MINUS">
+              <img src='../images/dash-circle-fill.svg' alt='-' />
+            </div>
+          </div>
+          <div class='mx-2 d-Inline-block'>
+            <datalist id='combined-range'>
+              {{#each range}}
+              <option class='range-option' value='{{this.[0]}}'>{{this.[1]}}</option>
+              {{/each}}
+            </datalist>
+          </div>
+          <div class='mx-2 d-Inline-block'>
+            <div class='cursor-pointer' id="combined-Vol-PLUS">
+              <img src='../images/plus-circle-fill.svg' alt='+' />
+            </div>
+          </div>
+          <div class='mx-2 d-Inline-block'>
+            <button class='default-btn mx-3' id="setCombinedSpeakerBtn">SET</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+<div class='row pt-1'>
+      <div class='col-6'>
+        <div class='row align-center'>
+          <div class='col-3'>
+            <h1 class='text-right'> AVC </h1>
+          </div>
+          <div class='col-9'>
+                <button id="avc-button" class='default-btn mx-3' >
+              OFF
+              </button>
+          </div>
+        </div>
+      </div>
+      <div class='col-6'>
+        <div class='row align-center'>
+          <div class='col-6'>
+            <h1 class='text-right'> ISOLATION </h1>
+          </div>
+          <div class='col-6'>
+              <a role='button' href="/isolate" class='default-btn mx-3 w-maxContent' >
+               ISOLATE
+              </a>
+          </div>
+        </div>
+      </div>
+      <div class='col-6'>
+        <div class='row align-center'>
+          <div class='col-3'>
+            <h1 class='text-right'> TEST </h1>
+          </div>
+          <div class='col-9'>
+              <a role='button' href="/selftest" class='default-btn mx-3 w-maxContent' >
+                Self Test
+              </a>
+          </div>
+        </div>
+      </div>
+      <div class='col-6'>
+        <div class='row align-center'>
+          <div class='col-6'>
+            <h1 class='text-right'> FAULTS </h1>
+          </div>
+          <div class='col-6'>
+              <a role='button' href="/faults" class='default-btn mx-3 w-maxContent' >
+               FAULT
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  <div role="alert" class="f-24 text-center alert alert-success d-none" id="statusAlert">
+  </div>
+</div>

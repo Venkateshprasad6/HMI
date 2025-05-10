@@ -1,0 +1,110 @@
+syntax = "proto2";
+
+package PIS.LCD.LMT.LMTControl;
+
+message LineInfo
+{
+  required string lineId = 1;
+  required string name = 2;
+}
+
+message GetLineList_Request
+{
+  required string languageCode = 2;
+}
+
+message GetLineList_Response
+{
+  repeated LineInfo lineList = 1;
+}
+
+message MissionInfo 
+{
+  required string missionId = 1;
+  required string name = 2;
+}
+
+message GetMissionList_Request
+{
+  required string languageCode = 1;
+  optional string lineId = 2;
+}
+
+message GetMissionList_Response
+{
+  repeated MissionInfo missionList = 1;
+}
+
+message StationInfo
+{
+  required string stationId = 1;
+  required string name = 2;
+}
+
+message GetStationList_Request
+{
+  required string missionId = 1;
+  required string languageCode = 2;
+}
+
+message GetStationList_Response
+{
+  repeated StationInfo stationList = 1;
+}
+
+message StartMission_Request
+{
+  required string missionId = 1;
+  optional string originStationId = 2;
+  optional string destinationStationId = 3;
+}
+
+message StopMission_Request
+{
+}
+
+message SetCurrentStation_Request
+{
+  required string stationId = 1;
+}
+
+message SkipStation_Request
+{
+  required string stationId = 1;
+  required bool skip = 2;
+}
+
+message PredefinedMessage
+{
+  required string eventId = 1;
+  required string name = 2;
+}
+
+message GetPredefinedMessageList_Request
+{
+  required string languageCode = 1;
+}
+
+message GetPredefinedMessageList_Response
+{
+  repeated PredefinedMessage predefinedMessageList = 1;
+}
+
+message SetPredefinedMessageEvent_Request
+{
+  required string eventId = 1;
+}
+
+enum StationState
+{
+  StationDeparture = 0;
+  StationApproach = 1;
+  StationArrival = 2;
+  StationStop = 3;
+}
+
+message SetStationState_Request
+{
+  required StationState stationState = 1;
+}
+

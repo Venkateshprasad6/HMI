@@ -1,0 +1,45 @@
+<!DOCTYPE>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{title}}</title>
+    {{!-- Css Styles --}}
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+    <div class='container'>
+        <div class='tab-container'>
+            <!-- topbar Tab Navbar -->
+            {{>topBar}}
+            <!-- End leftbar Tab Navbar -->
+
+
+            <!-- Middle display container -->
+            <div class='display-contianer' id="display-container">
+                 <div id="page-loader">
+                     <span class="loader spiner-large"> </span>
+                 </div>
+                {{{body}}}
+            </div>
+            <!-- End Middle display container -->
+
+            <!-- bottombar Tab Navbar -->
+            {{>bottomBar}}
+            <!--End bottombar Tab Navbar -->
+        </div>
+    </div>
+    <script src="../js/DDRClientWS.js"></script>
+    <script src="../js/common.js"></script>
+    {{#if script}}
+    <script src="js/{{script}}.js"></script>
+    {{/if}}
+    {{#if clientWSScript}}
+    <script src="../js/{{clientWSScript}}.js"></script>
+    {{/if}}
+</body>
+
+
+</html>

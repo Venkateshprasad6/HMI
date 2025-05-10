@@ -1,0 +1,45 @@
+<!-- check test -->
+<div class='tab-panel'>
+    <div class='p-1' id='checkListPanel'>
+        <h1 class='text-center p-1'>Self Test</h1>
+        <ul class='bg-silver p-0 pad-container' id='selfCheckTest'>
+            <li class="disabled">{{touchScreenTest}}
+                <span class='float-right'></span>
+            </li>
+            <li data-test='{{HMI_CMD_LEDTest}}'>{{LEDTest}}
+                <span class='float-right'></span>
+            </li>
+            <li data-test='{{HMI_CMD_LCDTest}}'>{{LCDTest}}
+                <span class='float-right'></span>
+            </li>
+            <li data-test='{{HMI_CMD_AudioTest}}'>{{audioTest}}<span class='float-right'></span></li>
+        </ul>
+
+        <div class='d-flex-wrap-center' id='checkTestButtons'>
+            <button class='default-btn w-15 mx-3' id='startCheckTestBtn'>Start</button>
+            <button class="default-btn w-15 mx-3" id="stopCheckTestBtn" disabled>Stop</button>
+        </div>
+         <div role="alert" class="f-24 text-center font-bold alert m-tb-12" id="statusAlert">
+    </div>
+    </div>
+
+    <!-- Error ModelBox -->
+    <div class='postion-absolute-center-auto bg-black-opacity d-none' id='checkTest-model'>
+        <div class='card text-center p-1 w-50'>
+            <div class='card-title align-center m-auto'>
+                <span class='mx-2 f-34 text-darkLight' id='model-title'>
+                    Check Test
+                </span>
+            </div>
+            <hr class='w-100' />
+            <div class='card-body'>
+                <h1 class='text-darkLight font-weight-500 m-0'>Confirm Test Status </h1>
+                <div class='d-flex-wrap-center pt-3'>
+                    <button class='default-btn mx-2' id='btn-test-Yes'>Pass</button>
+                    <button class='default-btn mx-2' id='btn-test-No'>Fail</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Error ModelBox-->
+</div>

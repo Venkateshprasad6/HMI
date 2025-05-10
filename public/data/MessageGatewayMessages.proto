@@ -1,0 +1,55 @@
+syntax = "proto2";
+
+package CMRL.console.MessageGatewayMessages;
+
+message GetPredefinedMessageList_Request
+{
+	optional string languageCode = 1;
+}
+
+message PredefinedMessage
+{
+  	required string messageId = 1;
+  	required string name = 2;
+}
+
+message GetPredefinedMessageList_Response
+{
+	repeated PredefinedMessage messageList = 1;
+	optional uint32 errorCode = 2;
+	optional string errorDetails = 3;
+}
+
+message StopPredefinedMessage_Request
+{
+}
+
+message StopPredefinedMessage_Response
+{
+	optional uint32 errorCode = 1;
+	optional string errorDetails = 2;
+}
+
+message SendPredefinedMessage_Request
+{
+	required string messageId = 1;
+	optional uint32 durationInSeconds = 2;
+}
+
+message SendPredefinedMessage_Response
+{
+	optional uint32 errorCode = 1;
+	optional string errorDetails = 2;
+}
+
+message SendFreeTextMessage_Request
+{
+	required string textMessage = 1;
+	optional uint32 durationInSeconds = 2;
+}
+
+message SendFreeTextMessage_Response
+{
+	optional uint32 errorCode = 1;
+	optional string errorDetails = 2;
+}

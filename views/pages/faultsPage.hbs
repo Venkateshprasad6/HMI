@@ -1,0 +1,335 @@
+<div class='tab-panel' id='panel-7'>
+  <div class='col-12 cursor-pointer'>
+    <h1 class='text-center border-transparent'>Fault Information Screen</h1>
+  </div>
+
+  <div class='bg-lightblack-card fault-table-scroll'>
+    <table class="fault-table" id='faultTable'>
+      <thead>
+        <tr>
+          <th>ITEM</th>
+          <th>DMC1</th>
+          <th>TC</th>
+          <th>DMC2</th>
+        </tr>
+        <tr>
+          <td>CCH</td>
+          {{#each DCP_Data}}
+          {{#if required}}
+          <td class="bg-{{faultStatus this}}" data-ddrfaultid='{{this.fault}}' data-ddrlostid='{{this.lost}}'></td>
+          {{else}}
+          <td class="bg-{{faultStatus}}">NA</td>
+          {{/if}}
+          {{/each}}
+        </tr>
+
+        <!-- PAD1 Row -->
+        <tr>
+          <td>PEI 1</td>
+          {{#each PAD1_Data}}
+          <td class="bg-{{faultStatus this}}" data-ddrfaultid='{{this.fault}}' data-ddrlostid='{{this.lost}}'></td>
+          {{/each}}
+        </tr>
+
+        <!-- PAD2 Row -->
+        <tr>
+          <td>PEI 2</td>
+          {{#each PAD2_Data}}
+          <td class="bg-{{faultStatus this}}" data-ddrfaultid='{{this.fault}}' data-ddrlostid='{{this.lost}}'></td>
+          {{/each}}
+        </tr>
+
+        <!-- PAD3 Row -->
+        <tr>
+          <td>PEI 3</td>
+          {{#each PAD3_Data}}
+          <td class="bg-{{faultStatus this}}" data-ddrfaultid='{{this.fault}}' data-ddrlostid='{{this.lost}}'></td>
+          {{/each}}
+        </tr>
+
+        <!-- PAD4 Row -->
+        <tr>
+          <td>PEI 4</td>
+          {{#each PAD4_Data}}
+          <td class="bg-{{faultStatus this}}" data-ddrfaultid='{{this.fault}}' data-ddrlostid='{{this.lost}}'></td>
+          {{/each}}
+        </tr>
+
+        <!-- PAD5 Row -->
+        <tr>
+          <td>PEI 5</td>
+          {{#each PAD5_Data}}
+          {{#if required}}
+          <td class="bg-{{faultStatus this}}" data-ddrfaultid='{{this.fault}}' data-ddrlostid='{{this.lost}}'></td>
+          {{else}}
+          <td class="bg-{{faultStatus}}">NA</td>
+          {{/if}}
+          {{/each}}
+        </tr>
+
+        <tr>
+          <td>FDI-TNI</td>
+          {{#each FDI_Data}}
+          {{#if required}}
+          <td class="bg-{{faultStatus this}}" data-ddrfaultid='{{this.fault}}' data-ddrlostid='{{this.lost}}'></td>
+          {{else}}
+          <td class="bg-{{faultStatus}}">NA</td>
+          {{/if}}
+          {{/each}}
+        </tr>
+
+        <!-- PID 1 Row -->
+        <tr>
+          <td>PID 1</td>
+          {{#each PID1_Data}}
+          <td class="bg-{{faultStatus this}}" data-ddrfaultid='{{this.fault}}' data-ddrlostid='{{this.lost}}'></td>
+          {{/each}}
+        </tr>
+
+        <!-- PID 2 Row -->
+        <tr>
+          <td>PID 2</td>
+          {{#each PID2_Data}}
+          <td class="bg-{{faultStatus this}}" data-ddrfaultid='{{this.fault}}' data-ddrlostid='{{this.lost}}'></td>
+          {{/each}}
+        </tr>
+
+        <!-- PID3 Row -->
+        <tr>
+          <td>PID 3</td>
+          {{#each PID3_Data}}
+          <td class="bg-{{faultStatus this}}" data-ddrfaultid='{{this.fault}}' data-ddrlostid='{{this.lost}}'></td>
+          {{/each}}
+        </tr>
+
+        <!-- PID4 Row -->
+        <tr>
+          <td>PID 4</td>
+          {{#each PID4_Data}}
+          <td class="bg-{{faultStatus this}}" data-ddrfaultid='{{this.fault}}' data-ddrlostid='{{this.lost}}'></td>
+          {{/each}}
+        </tr>
+
+        <!-- PID5 Row -->
+        <tr>
+          <td>PID 5</td>
+          {{#each PID5_Data}}
+          <td class="bg-{{faultStatus this}}" data-ddrfaultid='{{this.fault}}' data-ddrlostid='{{this.lost}}'></td>
+          {{/each}}
+        </tr>
+
+        <!-- PID6 Row -->
+        <tr>
+          <td>PID 6</td>
+          {{#each PID6_Data}}
+          <td class="bg-{{faultStatus this}}" data-ddrfaultid='{{this.fault}}' data-ddrlostid='{{this.lost}}'></td>
+          {{/each}}
+        </tr>
+
+        <!-- DRM1 Row -->
+        <tr>
+          <td>DRM 1</td>
+          {{#each DRM1_Data}}
+          <td class="bg-{{faultStatus this}}" data-ddrfaultid='{{this.fault}}' data-ddrlostid='{{this.lost}}'></td>
+          {{/each}}
+        </tr>
+
+        <!-- DRM2 Row -->
+        <tr>
+          <td>DRM 2</td>
+          {{#each DRM2_Data}}
+          <td class="bg-{{faultStatus this}}" data-ddrfaultid='{{this.fault}}' data-ddrlostid='{{this.lost}}'></td>
+          {{/each}}
+        </tr>
+
+        <!-- DRM3 Row -->
+        <tr>
+          <td>DRM 3</td>
+          {{#each DRM3_Data}}
+          <td class="bg-{{faultStatus this}}" data-ddrfaultid='{{this.fault}}' data-ddrlostid='{{this.lost}}'></td>
+          {{/each}}
+        </tr>
+
+        <!-- DRM4 Row -->
+        <tr>
+          <td>DRM 4</td>
+          {{#each DRM4_Data}}
+          <td class="bg-{{faultStatus this}}" data-ddrfaultid='{{this.fault}}' data-ddrlostid='{{this.lost}}'></td>
+          {{/each}}
+        </tr>
+
+        <!-- DRM5 Row -->
+        <tr>
+          <td>DRM 5</td>
+          {{#each DRM5_Data}}
+          <td class="bg-{{faultStatus this}}" data-ddrfaultid='{{this.fault}}' data-ddrlostid='{{this.lost}}'></td>
+          {{/each}}
+        </tr>
+
+        <!-- DRM6 Row -->
+        <tr>
+          <td>DRM 6</td>
+          {{#each DRM6_Data}}
+          <td class="bg-{{faultStatus this}}" data-ddrfaultid='{{this.fault}}' data-ddrlostid='{{this.lost}}'></td>
+          {{/each}}
+        </tr>
+
+        <!-- DRM7 Row -->
+        <tr>
+          <td>DRM 7</td>
+          {{#each DRM7_Data}}
+          <td class="bg-{{faultStatus this}}" data-ddrfaultid='{{this.fault}}' data-ddrlostid='{{this.lost}}'></td>
+          {{/each}}
+        </tr>
+
+        <!-- DRM8 Row -->
+        <tr>
+          <td>DRM 8</td>
+          {{#each DRM8_Data}}
+          <td class="bg-{{faultStatus this}}" data-ddrfaultid='{{this.fault}}' data-ddrlostid='{{this.lost}}'></td>
+          {{/each}}
+        </tr>
+
+        <!-- IEDD2 Row -->
+        <tr>
+          <td>IEDD 1</td>
+          {{#each IEDD1_Data}}
+          <td class="bg-{{faultStatus this}}" data-ddrfaultid='{{this.fault}}' data-ddrlostid='{{this.lost}}'></td>
+          {{/each}}
+        </tr>
+
+        <!-- IEDD2 Row -->
+        <tr>
+          <td>IEDD 2</td>
+          {{#each IEDD2_Data}}
+          <td class="bg-{{faultStatus this}}" data-ddrfaultid='{{this.fault}}' data-ddrlostid='{{this.lost}}'></td>
+          {{/each}}
+        </tr>
+
+        <!-- Int Cam1 Row -->
+        <tr>
+          <td>Int Cam 1</td>
+          {{#each INT_CAM1_Data}}
+          <td class="bg-{{faultStatus this}}" data-ddrfaultid='{{this.fault}}' data-ddrlostid='{{this.lost}}'></td>
+          {{/each}}
+        </tr>
+
+        <!-- Int Cam2 Row -->
+        <tr>
+          <td>Int Cam 2</td>
+          {{#each INT_CAM2_Data}}
+          <td class="bg-{{faultStatus this}}" data-ddrfaultid='{{this.fault}}' data-ddrlostid='{{this.lost}}'></td>
+          {{/each}}
+        </tr>
+
+        <!-- Int Cam3 Row -->
+        <tr>
+          <td>Int Cam 3</td>
+          {{#each INT_CAM3_Data}}
+          <td class="bg-{{faultStatus this}}" data-ddrfaultid='{{this.fault}}' data-ddrlostid='{{this.lost}}'></td>
+          {{/each}}
+        </tr>
+
+        <!-- Int Cam4 Row -->
+        <tr>
+          <td>Int Cam 4</td>
+          {{#each INT_CAM4_Data}}
+          <td class="bg-{{faultStatus this}}" data-ddrfaultid='{{this.fault}}' data-ddrlostid='{{this.lost}}'></td>
+          {{/each}}
+        </tr>
+
+        <!-- Cabin Cam Row -->
+        <tr>
+          <td>Cabin Cam</td>
+          {{#each CAB_CAM_Data}}
+          {{#if required}}
+          <td class="bg-{{faultStatus this}}" data-ddrfaultid='{{this.fault}}' data-ddrlostid='{{this.lost}}'></td>
+          {{else}}
+          <td class="bg-{{faultStatus}}">NA</td>
+          {{/if}}
+          {{/each}}
+        </tr>
+
+        <!-- Track Cam Row -->
+        <tr>
+          <td>Track Cam</td>
+          {{#each FRONT_CAM_Data}}
+          {{#if required}}
+          <td class="bg-{{faultStatus this}}" data-ddrfaultid='{{this.fault}}' data-ddrlostid='{{this.lost}}'></td>
+          {{else}}
+          <td class="bg-{{faultStatus}}">NA</td>
+          {{/if}}
+          {{/each}}
+        </tr>
+
+        <!-- OHE Cam Row -->
+        <tr>
+          <td>OHE Cam</td>
+          {{#each OHE_Data}}
+          {{#if this.required}}
+          <td class="bg-{{faultStatus this}}" data-ddrfaultid='{{this.fault}}' data-ddrlostid='{{this.lost}}'></td>
+          {{else}}
+          <td class="bg-{{faultStatus}}">NA</td>
+          {{/if}}
+          {{/each}}
+        </tr>
+
+        <!-- Ext Cam1 Row -->
+        <tr>
+          <td>Ext Cam 1</td>
+          {{#each EXT_CAM1_Data}}
+          <td class="bg-{{faultStatus this}}" data-ddrfaultid='{{this.fault}}' data-ddrlostid='{{this.lost}}'></td>
+          {{/each}}
+        </tr>
+
+        <!-- Ext Cam2 Row -->
+        <tr>
+          <td>Ext Cam 2</td>
+          {{#each EXT_CAM2_Data}}
+          <td class="bg-{{faultStatus this}}" data-ddrfaultid='{{this.fault}}' data-ddrlostid='{{this.lost}}'></td>
+          {{/each}}
+        </tr>
+
+        <!-- Panto Cam1 Row -->
+        <tr>
+          <td>Panto Cam 1</td>
+          {{#each PANTO1_CAM_Data}}
+          {{#if this.required}}
+          <td class="bg-{{faultStatus this}}" data-ddrfaultid='{{this.fault}}' data-ddrlostid='{{this.lost}}'></td>
+          {{else}}
+          <td class="bg-{{faultStatus}}">NA</td>
+          {{/if}}
+          {{/each}}
+        </tr>
+
+        <!-- Panto Cam2 Row -->
+        <tr>
+          <td>Panto Cam 2</td>
+          {{#each PANTO2_CAM_Data}}
+          {{#if this.required}}
+          <td class="bg-{{faultStatus this}}" data-ddrfaultid='{{this.fault}}' data-ddrlostid='{{this.lost}}'></td>
+          {{else}}
+          <td class="bg-{{faultStatus}}">NA</td>
+          {{/if}}
+          {{/each}}
+        </tr>
+
+        <!-- NVR Cam Row -->
+        <tr>
+          {{!-- {{generateTableRows "NVR" NVR_Data faultStatus)}} --}}
+          <td>NVR</td>
+          {{#each NVR_Data}}
+          {{#if this.required}}
+          <td class="bg-{{faultStatus this}}" data-ddrfaultid='{{this.fault}}' data-ddrlostid='{{this.lost}}'></td>
+          {{else}}
+          <td class="bg-{{faultStatus}}">NA</td>
+          {{/if}}
+          {{/each}}
+        </tr>
+
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+</div>

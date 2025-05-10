@@ -1,0 +1,74 @@
+<div class='tab-panel' id='panel-5'>
+  <div class='col-12 bg-lightblack-card ptb-40' id='padTabs'>
+      <h1 class='text-center border-transparent'>PEI Information Screen</h1>
+      <ul class='vertical-align p-0' id='padListSelection'>
+        <!-- DMC1 -->
+        <li>
+          <label class='control-label border-thin'>DMC1</label>
+          <button data-ddrStatusID='{{ddrPADStatus.PAS_PIC_V1_D387_STATUS}}' data-PEIcall='{{ddrPEICall.HMI_CPEI1Slctd_V1}}' class='PAD-btn PAD-idle'>PEI1</button>
+          <button data-ddrStatusID='{{ddrPADStatus.PAS_PIC_V1_D388_STATUS}}' data-PEIcall='{{ddrPEICall.HMI_CPEI2Slctd_V1}}' class='PAD-btn PAD-idle'>PEI2</button>
+          <button data-ddrStatusID='{{ddrPADStatus.PAS_PIC_V1_D389_STATUS}}' data-PEIcall='{{ddrPEICall.HMI_CPEI3Slctd_V1}}' class='PAD-btn PAD-idle'>PEI3</button>
+          <button data-ddrStatusID='{{ddrPADStatus.PAS_PIC_V1_D390_STATUS}}' data-PEIcall='{{ddrPEICall.HMI_CPEI4Slctd_V1}}' class='PAD-btn PAD-idle'>PEI4</button>
+          <button data-ddrStatusID='{{ddrPADStatus.PAS_PIC_V1_D391_STATUS}}' data-PEIcall='{{ddrPEICall.HMI_CPEI5Slctd_V1}}' class='PAD-btn PAD-idle'>PEI5</button>
+        </li>
+
+        <!-- TC1 -->
+        <li>
+          <label class='control-label border-thin'>TC1</label>
+          <button data-ddrStatusID='{{ddrPADStatus.PAS_PIC_V2_D395_STATUS}}' data-PEIcall='{{ddrPEICall.HMI_CPEI1Slctd_V2}}' class='PAD-btn PAD-idle'>PEI1</button>
+          <button data-ddrStatusID='{{ddrPADStatus.PAS_PIC_V2_D396_STATUS}}' data-PEIcall='{{ddrPEICall.HMI_CPEI2Slctd_V2}}' class='PAD-btn PAD-idle'>PEI2</button>
+          <button data-ddrStatusID='{{ddrPADStatus.PAS_PIC_V2_D397_STATUS}}' data-PEIcall='{{ddrPEICall.HMI_CPEI3Slctd_V2}}' class='PAD-btn PAD-idle'>PEI3</button>
+          <button data-ddrStatusID='{{ddrPADStatus.PAS_PIC_V2_D398_STATUS}}' data-PEIcall='{{ddrPEICall.HMI_CPEI4Slctd_V2}}' class='PAD-btn PAD-idle'>PEI4</button>
+        </li>
+
+        <!-- DMC2 -->
+        <li>
+          <label class='control-label border-thin'>DMC2</label>
+          <button data-ddrStatusID='{{ddrPADStatus.PAS_PIC_V3_D403_STATUS}}'  data-PEIcall='{{ddrPEICall.HMI_CPEI1Slctd_V3}}' class='PAD-btn PAD-idle'>PEI1</button>
+          <button data-ddrStatusID='{{ddrPADStatus.PAS_PIC_V3_D404_STATUS}}' data-PEIcall='{{ddrPEICall.HMI_CPEI2Slctd_V3}}'  class='PAD-btn PAD-idle'>PEI2</button>
+          <button data-ddrStatusID='{{ddrPADStatus.PAS_PIC_V3_D405_STATUS}}' data-PEIcall='{{ddrPEICall.HMI_CPEI3Slctd_V3}}'  class='PAD-btn PAD-idle'>PEI3</button>
+          <button data-ddrStatusID='{{ddrPADStatus.PAS_PIC_V3_D406_STATUS}}' data-PEIcall='{{ddrPEICall.HMI_CPEI4Slctd_V3}}'  class='PAD-btn PAD-idle'>PEI4</button>
+          <button data-ddrStatusID='{{ddrPADStatus.PAS_PIC_V3_D407_STATUS}}' data-PEIcall='{{ddrPEICall.HMI_CPEI5Slctd_V3}}'  class='PAD-btn PAD-idle'>PEI5</button>
+        </li>
+
+      </ul>
+
+      <div class='flex-parent jc-center'>
+        <button type='submit' class='PAD-btn PAD-reset' id="resetAll">Reset All</button>
+         <button type='submit' class='PAD-btn PAD-reset' id="paHold">Hold</button>
+      </div>
+  </div>
+
+  <h2 style='padding-left:16px;'>Label Indication</h2>
+  <ul class='p-0'>
+
+    <li class='inner-4'>
+      <span class='legend-color PAD-idle'>
+      </span>
+      <span class='font-bold f-24'>Default</span>
+    </li>
+    <li class='inner-4'>
+      <span class='legend-color PAD-hold'>
+      </span>
+      <span class='font-bold f-24'>Hold</span>
+    </li>
+    <li class='inner-4'>
+      <span class='legend-color PAD-lost-red'>
+      </span>
+      <span class='font-bold f-24'>Faults</span>
+    </li>
+    <li class='inner-4'>
+      <span class='legend-color PAD-active'>
+      </span>
+      <span class='font-bold f-24'>Call In-progress</span>
+    </li>
+    <li class='inner-4'>
+      <span class='legend-color PAD-waiting'>
+      </span>
+      <span class='font-bold f-24'>Call Waiting</span>
+    </li>
+  </ul>
+
+ <div role="alert" class="f-24 text-center font-bold alert" id="statusAlert">
+    </div>
+</div>

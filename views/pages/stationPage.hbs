@@ -1,0 +1,55 @@
+<div class='tab-panel' id='panel-9'>
+    <div class='p-1'>
+        <h1 class='text-center pb-2'>STATION BROADCASTING SCREEN</h1>
+        <div class='bg-lightblack-card'>
+            <div class='row'>
+                <div class='col-6 broadcase-center'>
+                    <h1 class='text-center font-bold'>CURRENT </h1>
+                    <div class='default-btn f-40' data-ddrvarid='{{LMTCurrentStationShortName}}'>
+                    </div>
+                </div>
+                <div class='col-6 broadcase-center'>
+                    <h1 class='text-center font-bold'>NEXT</h1>
+                    <div class='default-btn f-40' data-ddrvarid='{{LMTNextStationShortName}}'>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='bg-lightblack-card my-3'>
+            <h1 class='text-center'>DOOR INDICATION</h1>
+            <div id='door'>
+                <div class='row space-evenly'>
+                    <div class='col-3 broadcase-center'>
+                        <button class='default-btn btn-not-active f-40' data-ddrvarid='{{DDRNameDoorOpenLeft}}'>{{leftDoor}}</button>
+                    </div>
+                    <div class='col-3 broadcase-center'>
+                        <button class='default-btn btn-not-active f-40' data-ddrvarid='{{DDRNameDoorOpenRight}}'>{{rightDoor}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='bg-lightblack-card my-3'>
+            <div id='announcement'>
+                <h1 class='text-center'> ANNOUNCEMENTS</h1>
+                <div class='row'>
+                    <div class='col-12 broadcase-center'>
+                        <button class='default-btn btn-not-active f-40 w-75' data-tringercode="2" data-ddrvarid='{{DDRNameStationTriggerCodeID}}'
+                            id='departureBtn'>{{departureMsgPlay}}</button>
+                    </div>
+                    <div class='col-12 broadcase-center'>
+                        <button class='default-btn btn-not-active f-40 w-75' data-tringercode="3" data-ddrvarid='{{DDRNameStationTriggerCodeID}}'
+                            id='approachBtn'>{{approachMsgPlay}}</button>
+                    </div>
+                    <div class='col-12 broadcase-center'>
+                        <button class='default-btn btn-not-active f-40 w-75' data-tringercode="4" data-ddrvarid='{{DDRNameStationTriggerCodeID}}'
+                            id='arrivalBtn'>{{arrivalAnnouncement}}</button>
+                    </div>
+
+                    <div class='col-12 broadcase-center'>
+                        <button class='default-btn btn-not-active f-40 w-75' data-tringercode="1" data-ddrvarid='{{DDRNameStationTriggerCodeID}}'  id='stopBtn'>{{stopAnnouncement}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
